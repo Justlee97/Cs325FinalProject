@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton profileButton;
     ImageButton hamburgerButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,11 +7,12 @@
     tools:context=".profile">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout3"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
         android:background="@android:color/white"
-        android:gravity="top" >
+        android:gravity="top"
+        android:orientation="vertical">
 
 
         <RelativeLayout
@@ -22,51 +23,53 @@
 
             <ImageButton
                 android:id="@+id/back_button"
-                android:paddingTop="10dp"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
-                android:scaleType="fitCenter"
-                android:text="prev"
                 android:layout_alignParentLeft="true"
                 android:background="@android:color/white"
-                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48dp"/>
+                android:paddingTop="15dp"
+                android:scaleType="fitCenter"
+                android:text="prev"
+                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48dp" />
 
             <ImageButton
                 android:id="@+id/edit_button"
-                android:paddingTop="18dp"
                 android:layout_width="80dp"
                 android:layout_height="45dp"
-                android:scaleType="fitCenter"
-                android:text="next"
                 android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/baseline_edit_black_48dp"/>
+                android:paddingTop="18dp"
+                android:scaleType="fitCenter"
+                android:text="next"
+                app:srcCompat="@drawable/baseline_edit_black_48dp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:fontFamily="@font/montserratbold"
                 android:gravity="center"
                 android:paddingTop="15dp"
                 android:text="@string/profile"
                 android:textColor="#5d5d5d"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserratbold" />
+                android:textSize="20sp" />
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="123dp"
+                android:layout_height="115dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="81dp"
+                android:background="@drawable/profile_circle_shape"
+                android:indeterminate="false"
+                android:max="50"
+                android:progress="40"
+                android:progressDrawable="@drawable/profile_circle_progress_bar" />
 
         </RelativeLayout>
 
-        <ImageButton
-            android:id="@+id/plus_button"
-            android:paddingTop="95dp"
-            android:paddingLeft="320dp"
-            android:layout_width="wrap_content"
-            android:layout_height="1000dp"
-            android:scaleType="fitCenter"
-            android:text="next"
-            android:layout_alignParentRight="true"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/plusbutton"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

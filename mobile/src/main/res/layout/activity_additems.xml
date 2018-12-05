@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".additems">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:gravity="top" >
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" >
+
+
+
+        <ImageButton
+                android:id="@+id/back_button"
+                android:paddingTop="15dp"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:text="prev"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/white"
+                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:text="@string/add_items"
+                android:textColor="#5d5d5d"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserratbold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:letterSpacing="0.15"
+                android:paddingLeft="25dp"
+                android:paddingTop="80dp"
+                android:text="@string/categories"
+                android:textColor="#9d9d9d"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserratsemibold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

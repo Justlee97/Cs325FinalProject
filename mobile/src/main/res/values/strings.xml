@@ -19,6 +19,15 @@
     <string name="electronics">Electronics</string>
     <string name="organics">Organics</string>
     <string name="textiles">Textiles</string>
+    <string name="daily_total">DAILY TOTAL</string>
+    <string name="grand_total">GRAND TOTAL</string>
+    <string name="user_name">Amy Liu</string>
+    <string name="level">Level</string>
+    <string name="level_number">2</string>
+    <string name="current_exp">40</string>
+    <string name="exp">/50 EXP</string>
+    <string name="date">17 Dec</string>
+
 
 
 </resources>

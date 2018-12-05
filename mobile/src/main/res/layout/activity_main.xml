@@ -29,11 +29,10 @@
 
             <ImageButton
                 android:id="@+id/profile_button"
-                android:paddingTop="10dp"
-                android:layout_width="80dp"
+                android:paddingTop="15dp"
+                android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:scaleType="fitCenter"
-                android:text="prev"
                 android:layout_alignParentLeft="true"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/baseline_person_outline_black_48dp"/>
@@ -44,10 +43,47 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:scaleType="fitCenter"
-                android:text="next"
                 android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/baseline_list_black_48dp"/>
+
+            <ImageButton
+                android:id="@+id/left_arrow"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/date"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="226dp"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/transparent"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/baseline_keyboard_arrow_left_black_18dp" />
+
+            <ImageButton
+                android:id="@+id/right_arrow"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/date"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/transparent"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/baseline_keyboard_arrow_right_black_18dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="80dp"
+                android:text="@string/date"
+                android:textColor="#82e8b8"
+                android:textSize="27sp"
+                android:fontFamily="@font/montserratbold" />
 
             <TextView
                 android:id="@+id/textView2"

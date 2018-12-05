@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".itemlist" />
-        <activity android:name=".profile"></activity>
+        <activity android:name=".profile" />
+        <activity android:name=".additems"></activity>
     </application>
 
 </manifest>

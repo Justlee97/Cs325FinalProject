@@ -6,35 +6,23 @@ import android.widget.ImageButton;
 import android.content.Intent;
 import android.view.View;
 
-public class itemlist extends AppCompatActivity {
+public class additems extends AppCompatActivity {
 
     ImageButton backButton;
-    ImageButton plusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_itemlist);
+        setContentView(R.layout.activity_additems);
 
         backButton = (ImageButton) findViewById(R.id.back_button) ;
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadActivity = new Intent(itemlist.this, MainActivity.class);
+                Intent intentLoadActivity = new Intent(additems.this, itemlist.class);
                 startActivity(intentLoadActivity);
             }
         });
-
-        plusButton = (ImageButton) findViewById(R.id.plus_button) ;
-
-        plusButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLoadActivity = new Intent(itemlist.this, additems.class);
-                startActivity(intentLoadActivity);
-            }
-        });
-
     }
 }
