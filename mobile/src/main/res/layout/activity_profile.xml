@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:gravity="top" >
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:paddingTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:text="prev"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/white"
+                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48dp"/>
+
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:paddingTop="18dp"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:text="next"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/baseline_edit_black_48dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:text="@string/profile"
+                android:textColor="#5d5d5d"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserratbold" />
+
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/plus_button"
+            android:paddingTop="95dp"
+            android:paddingLeft="320dp"
+            android:layout_width="wrap_content"
+            android:layout_height="1000dp"
+            android:scaleType="fitCenter"
+            android:text="next"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/plusbutton"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

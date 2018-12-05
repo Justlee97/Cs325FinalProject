@@ -11,23 +11,112 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:gravity="top" >
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" >
+
+            <ImageButton
+                android:id="@+id/profile_button"
+                android:paddingTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:text="prev"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/baseline_person_outline_black_48dp"/>
+
+            <ImageButton
+                android:id="@+id/hamburger_button"
+                android:paddingTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:text="next"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/baseline_list_black_48dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="500dp"
+                android:text="@string/feedback"
+                android:textColor="#a9a9a9"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserratregular" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingTop="245dp"
+                android:paddingLeft="150dp"
+                android:text="@string/amount"
+                android:textColor="#6ae0d6"
+                android:textSize="60sp"
+                android:fontFamily="@font/montserratsemibold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingTop="245dp"
+                android:paddingLeft="190dp"
+                android:text="@string/separator"
+                android:textColor="#e0e0e0"
+                android:textSize="60sp"
+                android:fontFamily="@font/montserratsemibold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingTop="245dp"
+                android:paddingLeft="217dp"
+                android:text="@string/target_amount"
+                android:textColor="#e0e0e0"
+                android:textSize="60sp"
+                android:fontFamily="@font/montserratsemibold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:paddingTop="325dp"
+                android:text="@string/items_recycled"
+                android:textColor="#a9a9a9"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserratregular" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+
 
 </android.support.design.widget.CoordinatorLayout>
