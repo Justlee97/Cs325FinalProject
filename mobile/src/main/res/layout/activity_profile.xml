@@ -70,6 +70,28 @@
                 android:progressDrawable="@drawable/profile_circle_progress_bar" />
 
         </RelativeLayout>
-
     </LinearLayout>
+
+    <carbon.widget.FloatingActionButton
+        android:id="@+id/plus_button"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/carbon_padding"
+        android:background="@drawable/plusbutton"
+        android:src="@drawable/baseline_close_black_18dp"
+        android:text="Rounded with ripple"
+        app:carbon_anchorGravity="top"
+        app:carbon_cornerRadius="28dp"
+        app:carbon_elevation="8dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:carbon_rippleColor="#3ad0a7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.143" />
 </android.support.constraint.ConstraintLayout>

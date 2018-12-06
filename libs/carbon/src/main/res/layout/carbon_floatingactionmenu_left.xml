@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="carbon.component.MenuItem"/>
+    </data>
+
+    <carbon.widget.LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/carbon_fabSize"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        app:carbon_inAnimation="fade">
+
+        <carbon.widget.FloatingActionButton
+            android:id="@+id/carbon_fab"
+            style="@style/carbon_FloatingActionButton.Small"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/carbon_paddingHalf"
+            android:layout_marginRight="@dimen/carbon_paddingHalf"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:enabled="@{data.enabled}"
+            android:focusable="false"/>
+
+        <carbon.widget.TextView
+            android:id="@+id/carbon_tooltip"
+            style="@style/carbon_TextView.Tooltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/carbon_marginHalf"
+            android:duplicateParentState="true"
+            android:enabled="@{data.enabled}"
+            android:maxLines="1"
+            android:text="@{data.title}"/>
+    </carbon.widget.LinearLayout>
+</layout>

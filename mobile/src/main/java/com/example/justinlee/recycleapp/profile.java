@@ -10,6 +10,7 @@ public class profile extends AppCompatActivity {
 
     ImageButton backButton;
     ImageButton editButton;
+    carbon.widget.FloatingActionButton plusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,15 @@ public class profile extends AppCompatActivity {
                     startActivity(intentLoadActivity);
                 }
             });
+
+        plusButton = (carbon.widget.FloatingActionButton) findViewById(R.id.plus_button) ;
+
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentLoadActivity = new Intent(profile.this, MainActivity.class);
+                startActivity(intentLoadActivity);
+            }
+        });
     }
 }

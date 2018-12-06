@@ -78,11 +78,97 @@
                 android:text="@string/current_items"
                 android:textColor="#9d9d9d"
                 android:textSize="13sp" />
-
         </RelativeLayout>
-
-
     </LinearLayout>
+
+    <carbon.widget.Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#41d9cc"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="2dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <carbon.widget.Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#82e6ae"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="2dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <carbon.widget.Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#fbdd7f"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="2dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <carbon.widget.Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#65a4ed"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="2dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <carbon.widget.Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#fbdd7f"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="2dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <carbon.widget.ImageView
+        android:layout_width="360dp"
+        android:layout_height="300dp"
+        android:background="#fff"
+        app:carbon_cornerRadius="6dp"
+        app:carbon_elevation="9dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.439" />
 
     <TextView
         android:id="@+id/textView5"
@@ -135,19 +221,28 @@
         android:textColor="#5d5d5d"
         android:textSize="23sp" />
 
-    <ImageButton
+    <carbon.widget.FloatingActionButton
         android:id="@+id/plus_button"
-        android:layout_width="81dp"
-        android:layout_height="69dp"
-        android:layout_gravity="bottom"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/carbon_padding"
+        android:background="@drawable/plusbutton"
+        android:src="@drawable/baseline_close_black_18dp"
+        android:text="Rounded with ripple"
+        app:carbon_anchorGravity="top"
+        app:carbon_cornerRadius="28dp"
+        app:carbon_elevation="8dp"
+        app:carbon_elevationAmbientShadowColor="#e5eae7"
+        app:carbon_elevationShadowColor="#e5eae7"
+        app:carbon_rippleColor="#3ad0a7"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toStartOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.098"
-        app:srcCompat="@drawable/plusbutton" />
+        app:layout_constraintVertical_bias="0.12" />
+
 
 </android.support.constraint.ConstraintLayout>

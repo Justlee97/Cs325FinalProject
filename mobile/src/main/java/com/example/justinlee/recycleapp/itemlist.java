@@ -6,10 +6,11 @@ import android.widget.ImageButton;
 import android.content.Intent;
 import android.view.View;
 
+
 public class itemlist extends AppCompatActivity {
 
     ImageButton backButton;
-    ImageButton plusButton;
+    carbon.widget.FloatingActionButton plusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class itemlist extends AppCompatActivity {
             }
         });
 
-        plusButton = (ImageButton) findViewById(R.id.plus_button) ;
+        plusButton = (carbon.widget.FloatingActionButton) findViewById(R.id.plus_button) ;
 
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
