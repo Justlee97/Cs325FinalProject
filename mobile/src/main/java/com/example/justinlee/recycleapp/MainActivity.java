@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton profileButton;
     ImageButton hamburgerButton;
+    ImageButton circleButton;
 
 
     @Override
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         hamburgerButton = (ImageButton) findViewById(R.id.hamburger_button);
 
         hamburgerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentLoadActivity = new Intent(MainActivity.this, itemlist.class);
+                startActivity(intentLoadActivity);
+            }
+        });
+
+        circleButton = (ImageButton) findViewById(R.id.circle_button) ;
+
+        circleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentLoadActivity = new Intent(MainActivity.this, itemlist.class);

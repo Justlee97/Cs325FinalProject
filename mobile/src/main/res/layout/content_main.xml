@@ -38,14 +38,14 @@
                 android:progress="6"
                 android:progressDrawable="@drawable/circular_progress_bar" />
 
-            <ImageView
-                android:id="@+id/circle"
+            <ImageButton
+                android:id="@+id/circle_button"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
                 android:background="@drawable/circle"
-                android:elevation="0dp" />
+                 />
 
 
         </RelativeLayout>

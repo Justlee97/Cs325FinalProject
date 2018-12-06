@@ -21,7 +21,7 @@ public class additems extends AppCompatActivity {
     Context mContext;
     Activity mActivity;
     RelativeLayout mRelativeLayout;
-    Button mButton;
+    carbon.widget.Button mButton;
     PopupWindow mPopupWindow;
 
 
@@ -30,7 +30,7 @@ public class additems extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_additems);
 
-        backButton = (ImageButton) findViewById(R.id.back_button) ;
+        backButton = (ImageButton) findViewById(R.id.back_button);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,7 @@ public class additems extends AppCompatActivity {
                 LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
 
                 // Inflate the custom layout/view
-                View customView = inflater.inflate(R.layout.add_item_popup,null);
+                View customView = inflater.inflate(R.layout.add_item_popup, null);
 
                 mPopupWindow = new PopupWindow(
                         customView,
@@ -60,11 +60,11 @@ public class additems extends AppCompatActivity {
                         LayoutParams.WRAP_CONTENT
                 );
 
-                if(Build.VERSION.SDK_INT>=21){
+                if (Build.VERSION.SDK_INT >= 21) {
                     mPopupWindow.setElevation(5.0f);
                 }
 
-                ImageButton closeButton = (ImageButton) customView.findViewById(R.id.back_button);
+                ImageButton closeButton = (ImageButton) customView.findViewById(R.id.close_button);
 
                 closeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -74,11 +74,11 @@ public class additems extends AppCompatActivity {
                     }
                 });
 
-                mPopupWindow.showAtLocation(mRelativeLayout, Gravity.CENTER,0,0);
+                mPopupWindow.showAtLocation(mRelativeLayout, Gravity.CENTER, 0, 0);
 
 
             }
-});
+        });
+    }
 
-}
 }

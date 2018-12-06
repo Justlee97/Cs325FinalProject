@@ -18,15 +18,15 @@
         android:layout_height="600dp" >
 
         <ImageButton
-            android:id="@+id/back_button"
+            android:id="@+id/close_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="89dp"
-            android:layout_marginRight="301dp"
-            android:layout_marginBottom="444dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="299dp"
+            android:layout_marginBottom="497dp"
             android:background="@android:color/transparent"
             android:paddingTop="15dp"
             android:scaleType="fitCenter"
