@@ -2,6 +2,7 @@ package com.example.justinlee.recycleapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.content.Intent;
@@ -14,9 +15,10 @@ import android.view.LayoutInflater;
 import android.view.Gravity;
 import android.os.Build;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Spinner;
 
 public class additems extends AppCompatActivity {
-
+    private Spinner spinner;
     ImageButton backButton;
     Context mContext;
     Activity mActivity;
@@ -37,14 +39,19 @@ public class additems extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentLoadActivity = new Intent(additems.this, itemlist.class);
                 startActivity(intentLoadActivity);
+                finish();
             }
         });
+
+        spinner = (Spinner)findViewById(R.id.spinner);
+        String[] categoriesSpinner = new String[] {"Plastic", "Glass","Paper"};
+        ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, android.R.layout.simple_spinner_item,categoriesSpinner);
 
         mContext = getApplicationContext();
         mActivity = additems.this;
         mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
         mButton = (carbon.widget.Button) findViewById(R.id.glass);
-
+        spinner.setAdapter(adapter);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

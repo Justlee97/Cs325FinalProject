@@ -219,7 +219,9 @@
         android:paddingTop="600dp"
         android:text="@string/target_amount"
         android:textColor="#5d5d5d"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <carbon.widget.FloatingActionButton
         android:id="@+id/plus_button"
