@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RecycleApp</string>
+    <string name="app_name">GreenUP</string>
     <string name="action_settings">Settings</string>
     <string name="feedback">Keep up the good work!</string>
     <string name="amount">6</string>
