@@ -1,5 +1,6 @@
 package com.example.justinlee.recycleapp;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -28,15 +29,25 @@ public class additems extends AppCompatActivity {
     RelativeLayout mRelativeLayout;
     carbon.widget.Button mButton;
     PopupWindow mPopupWindow;
-    Integer x = 4;
+    EditText amount;
 
-    public int getX(){
-        return x;
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_additems);
+
+        button = (Button)findViewById(R.id.button); //yeet button
+        amount = (EditText)findViewById(R.id.edittext);//user input
+
+        SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mprefs.edit();
+        mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+        int currentLevel = mprefs.getInt("level", 1);
+        editor.apply();
+        editor.commit();
+//        int currentprogress = mprefs.getInt("Pbar",0);
+//        EditText das = (EditText)findViewById(R.id.edittext);
+//        das.setText(currentprogress);
 
         backButton = (ImageButton) findViewById(R.id.back_button);
 
@@ -48,6 +59,7 @@ public class additems extends AppCompatActivity {
                 finish();
             }
         });
+
 
         spinner = (Spinner)findViewById(R.id.spinner);
         String[] categoriesSpinner = new String[] {"Plastic", "Glass","Paper"};
@@ -100,6 +112,20 @@ public class additems extends AppCompatActivity {
                 mPopupWindow.showAtLocation(mRelativeLayout, Gravity.CENTER, 0, 0);
             }
 
+        });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentLoadActivity = new Intent(additems.this, itemlist.class);
+                startActivity(intentLoadActivity);
+                SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+                String amountadded = amount.getText().toString();
+                int finalamount = Integer.parseInt(amountadded);
+                editor.putInt("Pbar", mprefs.getInt("Pbar" , 0) + finalamount);
+                editor.apply();
+                editor.commit();
+                finish();
+            }
         });
     }
 

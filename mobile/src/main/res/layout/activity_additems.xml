@@ -96,7 +96,7 @@
             app:layout_constraintVertical_bias="0.749" />
 
         <Button
-            android:id="@id/back_button"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/carbon_black"
