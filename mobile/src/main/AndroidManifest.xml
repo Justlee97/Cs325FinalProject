@@ -21,7 +21,11 @@
         </activity>
         <activity android:name=".itemlist" />
         <activity android:name=".profile" />
-        <activity android:name=".additems"></activity>
+        <activity android:name=".additems" />
+        <activity android:name=".plastic" />
+        <activity android:name=".paper" />
+        <activity android:name=".glass" />
+        <activity android:name=".electronics"></activity>
     </application>
 
 </manifest>
