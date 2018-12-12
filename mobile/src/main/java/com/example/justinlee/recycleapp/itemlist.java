@@ -32,7 +32,7 @@ public class itemlist extends AppCompatActivity {
         map.put("item", 1);
         List<String> currlist = new ArrayList<String>();
         for(Map.Entry<String, Integer >e: map.entrySet()){
-            currlist.add(e.getKey() + ": " + e.getValue());
+            currlist.add(e.getKey() + ":                                          " + e.getValue());
         }
         bin = (ListView)findViewById(R.id.bin);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(itemlist.this, android.R.layout.simple_list_item_1,currlist);
