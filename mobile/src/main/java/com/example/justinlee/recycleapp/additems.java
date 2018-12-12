@@ -77,44 +77,7 @@ public class additems extends AppCompatActivity {
 //                finish();
 //            }
 //        });
-        mContext = getApplicationContext();
-        mActivity = additems.this;
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
-        mButton = (carbon.widget.Button) findViewById(R.id.glass);
-        spinner.setAdapter(adapter);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Initialize a new instance of LayoutInflater service
-                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-
-                // Inflate the custom layout/view
-                View customView = inflater.inflate(R.layout.add_item_popup, null);
-
-                mPopupWindow = new PopupWindow(
-                        customView,
-                        LayoutParams.WRAP_CONTENT,
-                        LayoutParams.WRAP_CONTENT
-                );
-
-                if (Build.VERSION.SDK_INT >= 21) {
-                    mPopupWindow.setElevation(5.0f);
-                }
-
-                ImageButton closeButton = (ImageButton) customView.findViewById(R.id.close_button);
-
-                closeButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        // Dismiss the popup window
-                        mPopupWindow.dismiss();
-                    }
-                });
-
-                mPopupWindow.showAtLocation(mRelativeLayout, Gravity.CENTER, 0, 0);
-            }
-
-        });
+        
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
