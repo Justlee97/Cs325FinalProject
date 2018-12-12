@@ -12,7 +12,7 @@
         android:background="@android:color/white"
         android:gravity="top"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
 
@@ -69,11 +69,11 @@
             android:spinnerMode="dropdown" />
 
         <EditText
+            android:id="@+id/edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="numberDecimal"
-            android:id="@+id/edittext"/>
+            android:inputType="numberDecimal" />
 
         <carbon.widget.Button
             android:id="@+id/glass"
@@ -99,8 +99,15 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/carbon_black"
-            android:text="Yeet" />
+            android:text="Yeet"
+            android:textColor="@color/carbon_black" />
+
+        <EditText
+            android:id = "@+id/itemname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Item" />
 
     </LinearLayout>
 

@@ -30,6 +30,7 @@ public class additems extends AppCompatActivity {
     carbon.widget.Button mButton;
     PopupWindow mPopupWindow;
     EditText amount;
+    EditText item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class additems extends AppCompatActivity {
 
         button = (Button)findViewById(R.id.button); //yeet button
         amount = (EditText)findViewById(R.id.edittext);//user input
+        item = (EditText)findViewById(R.id.itemname); //Item name
 
         SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = mprefs.edit();
@@ -118,10 +120,14 @@ public class additems extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentLoadActivity = new Intent(additems.this, itemlist.class);
                 startActivity(intentLoadActivity);
+
+
+
                 SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
                 String amountadded = amount.getText().toString();
                 int finalamount = Integer.parseInt(amountadded);
                 editor.putInt("Pbar", mprefs.getInt("Pbar" , 0) + finalamount);
+                editor.putString("itemadded",amount.toString());
                 editor.apply();
                 editor.commit();
                 finish();

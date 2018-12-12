@@ -35,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = mprefs.edit();
         mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
         int currentLevel = mprefs.getInt("level", 1);
+
         int currentprogress = mprefs.getInt("Pbar",0);
         progressBar.setProgress(currentprogress);
+
         //Finished loading previous progressbar
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
