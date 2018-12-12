@@ -70,6 +70,18 @@
                 android:progressDrawable="@drawable/profile_circle_progress_bar" />
 
         </RelativeLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/montserratbold"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Amy Liu"
+                android:textColor="#5d5d5d"
+                android:textSize="20sp" />
     </LinearLayout>
 
     <carbon.widget.FloatingActionButton

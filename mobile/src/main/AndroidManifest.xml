@@ -25,7 +25,8 @@
         <activity android:name=".plastic" />
         <activity android:name=".paper" />
         <activity android:name=".glass" />
-        <activity android:name=".electronics"></activity>
+        <activity android:name=".electronics" />
+        <activity android:name=".addgoal"></activity>
     </application>
 
 </manifest>

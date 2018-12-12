@@ -42,7 +42,7 @@ public class profile extends AppCompatActivity {
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLoadActivity = new Intent(profile.this, MainActivity.class);
+                Intent intentLoadActivity = new Intent(profile.this, addgoal.class);
                 startActivity(intentLoadActivity);
             }
         });
