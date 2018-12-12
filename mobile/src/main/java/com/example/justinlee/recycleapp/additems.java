@@ -4,10 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.content.Intent;
 import android.view.View;
 import android.widget.PopupWindow;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.content.Context;
 import android.app.Activity;
@@ -20,13 +22,17 @@ import android.widget.Spinner;
 public class additems extends AppCompatActivity {
     private Spinner spinner;
     ImageButton backButton;
+    Button button;
     Context mContext;
     Activity mActivity;
     RelativeLayout mRelativeLayout;
     carbon.widget.Button mButton;
     PopupWindow mPopupWindow;
+    Integer x = 4;
 
-
+    public int getX(){
+        return x;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +53,16 @@ public class additems extends AppCompatActivity {
         String[] categoriesSpinner = new String[] {"Plastic", "Glass","Paper"};
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, android.R.layout.simple_spinner_item,categoriesSpinner);
 
+//        ProgressBar progressbar = (ProgressBar) findViewById(R.id.progressBar);
+//        EditText numadded = (EditText)findViewById(R.id.edittext);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentLoadActivity = new Intent(additems.this, itemlist.class);
+//                startActivity(intentLoadActivity);
+//                finish();
+//            }
+//        });
         mContext = getApplicationContext();
         mActivity = additems.this;
         mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
@@ -82,9 +98,8 @@ public class additems extends AppCompatActivity {
                 });
 
                 mPopupWindow.showAtLocation(mRelativeLayout, Gravity.CENTER, 0, 0);
-
-
             }
+
         });
     }
 

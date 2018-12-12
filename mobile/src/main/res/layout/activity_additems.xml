@@ -72,7 +72,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:id="@+id/edittext"/>
 
         <carbon.widget.Button
             android:id="@+id/glass"
@@ -93,6 +94,13 @@
             app:layout_constraintStart_toEndOf="@+id/linearLayout2"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
             app:layout_constraintVertical_bias="0.749" />
+
+        <Button
+            android:id="@id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/carbon_black"
+            android:text="Yeet" />
 
     </LinearLayout>
 
