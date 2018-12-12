@@ -19,6 +19,9 @@ import android.view.Gravity;
 import android.os.Build;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class additems extends AppCompatActivity {
     private Spinner spinner;
@@ -47,9 +50,21 @@ public class additems extends AppCompatActivity {
         int currentLevel = mprefs.getInt("level", 1);
         editor.apply();
         editor.commit();
-//        int currentprogress = mprefs.getInt("Pbar",0);
-//        EditText das = (EditText)findViewById(R.id.edittext);
-//        das.setText(currentprogress);
+
+
+//        TextView daily = ((TextView) itemlist.
+//                findViewById(R.layout.activity_itemlist));
+//        TextView total = ((TextView)findViewById(R.id.textView8));
+////        daily.setText(mprefs.getString("dailystr", "0"));
+////        total.setText(mprefs.getString("totalstr", "0"));
+//        String dailystr = daily.toString();
+//        String totalstr = total.toString();
+//        int dailynum = Integer.parseInt(dailystr);
+//        int totalnum = Integer.parseInt(totalstr);
+//        editor.putString("dailynum", ""+dailynum);
+//        editor.putString("totalnum", ""+totalnum);
+//        editor.apply();
+//        editor.commit();
 
         backButton = (ImageButton) findViewById(R.id.back_button);
 
@@ -78,6 +93,8 @@ public class additems extends AppCompatActivity {
 //            }
 //        });
 
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +108,13 @@ public class additems extends AppCompatActivity {
                 int finalamount = Integer.parseInt(amountadded);
                 editor.putInt("Pbar", mprefs.getInt("Pbar" , 0) + finalamount);
                 editor.putString("itemadded",amount.toString());
+
+//                int alteredDaily = (dailynum + finalamount);
+//                int alteredTotal = ((totalnum + finalamount));
+//                editor.putString("daily", "" + alteredDaily);
+//                editor.putString("total", ""+ alteredTotal);
+//                daily.setText("" + alteredDaily);
+//                total.setText("" + alteredTotal);
                 editor.apply();
                 editor.commit();
                 finish();

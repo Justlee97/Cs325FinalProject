@@ -1,5 +1,7 @@
 package com.example.justinlee.recycleapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Adapter;
@@ -39,6 +41,31 @@ public class itemlist extends AppCompatActivity {
         bin = (ListView)findViewById(R.id.bin);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(itemlist.this, android.R.layout.simple_list_item_1,currlist);
         bin.setAdapter(arrayAdapter);
+
+
+
+
+
+
+        SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mprefs.edit();
+        mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+        TextView daily = ((TextView)findViewById(R.id.textView7));
+        TextView total = ((TextView)findViewById(R.id.textView8));
+        daily.setText(mprefs.getString("dailystr", "0"));
+        total.setText(mprefs.getString("totalstr", "0"));
+        String dailystr = daily.toString();
+        String totalstr = total.toString();
+//        int dailynum = Integer.parseInt(dailystr);
+//        int totalnum = Integer.parseInt(totalstr);
+        editor.putString("dailynum", ""+1);
+        editor.putString("totalnum", ""+1);
+        editor.apply();
+        editor.commit();
+
+
+
+
 
 
         backButton = (ImageButton) findViewById(R.id.back_button) ;
@@ -94,6 +121,14 @@ public class itemlist extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentLoadActivity = new Intent(itemlist.this, additems.class);
                 startActivity(intentLoadActivity);
+                int alteredDaily = (1);
+                int alteredTotal = (( 1));
+                editor.putString("daily", "" + alteredDaily);
+                editor.putString("total", ""+ alteredTotal);
+                daily.setText("" + alteredDaily);
+                total.setText("" + alteredTotal);
+                editor.apply();
+                editor.commit();
             }
         });
 
