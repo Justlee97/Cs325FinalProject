@@ -26,11 +26,18 @@ public class itemlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemlist);
 
-        String[] dude = {"Plastic Bottles: 1"};
+        //Hashmap to ArrayList to ListView
+        //We can try to save hashmap to internal memory
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        map.put("item", 1);
+        List<String> currlist = new ArrayList<String>();
+        for(Map.Entry<String, Integer >e: map.entrySet()){
+            currlist.add(e.getKey() + ": " + e.getValue());
+        }
         bin = (ListView)findViewById(R.id.bin);
-        List<String> currlist = new ArrayList<String>(Arrays.asList(dude));
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(itemlist.this, android.R.layout.simple_list_item_1,currlist);
         bin.setAdapter(arrayAdapter);
+
 
         backButton = (ImageButton) findViewById(R.id.back_button) ;
         backButton.setOnClickListener(new View.OnClickListener() {
