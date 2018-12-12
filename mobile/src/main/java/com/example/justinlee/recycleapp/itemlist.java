@@ -2,9 +2,13 @@ package com.example.justinlee.recycleapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ListView;
+import java.util.*;
 
 
 public class itemlist extends AppCompatActivity {
@@ -15,11 +19,19 @@ public class itemlist extends AppCompatActivity {
     carbon.widget.Button glassButton;
     carbon.widget.Button electronicsButton;
     carbon.widget.FloatingActionButton plusButton;
-
+    ListView bin;
+    Adapter adapt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemlist);
+
+        String[] dude = {"Plastic Bottles: 1"};
+        bin = (ListView)findViewById(R.id.bin);
+        List<String> currlist = new ArrayList<String>(Arrays.asList(dude));
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(itemlist.this, android.R.layout.simple_list_item_1,currlist);
+        bin.setAdapter(arrayAdapter);
+
         backButton = (ImageButton) findViewById(R.id.back_button) ;
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
