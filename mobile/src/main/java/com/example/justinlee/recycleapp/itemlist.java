@@ -83,7 +83,7 @@ public class itemlist extends AppCompatActivity {
             total.setText(totaltxt);}
         else {
             //Initilization
-            editor.putInt("totalnum", 5);
+            editor.putInt("totalnum", 6);
             int testing = 5;
             editor.apply();
             editor.commit();
