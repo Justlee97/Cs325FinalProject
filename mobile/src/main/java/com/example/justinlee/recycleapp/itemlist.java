@@ -51,25 +51,30 @@ public class itemlist extends AppCompatActivity {
 
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
+
+
         boolean dailyexists = mprefs.contains("dailynum");
         if (dailyexists){
             int dnum = mprefs.getInt("dailynum", 0);
             String dailytxt = "" + dnum;
             daily.setText(dailytxt);}
-        else daily.setText("0");
+        else{
+            daily.setText("0");
+        }
+
         boolean totalexists = mprefs.contains("totalnum");
         if (totalexists){
             int tnum = mprefs.getInt("totalnum", 0);
             String totaltxt = "" + tnum;
-            daily.setText(totaltxt);}
-        else daily.setText("0");
+            total.setText(totaltxt);}
+        else total.setText("0");
 //        int dnum = mprefs.getInt("dailynum", 0);
 //        int tnum = mprefs.getInt("totalnum", 0);
 //
 //        String totaltxt = "" + tnum;
 //        String totalstr = ""+  mprefs.getInt("total", 0);
 //        daily.setText("0");
-        total.setText("0");
+
 
         editor.apply();
         editor.commit();
@@ -132,12 +137,12 @@ public class itemlist extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentLoadActivity = new Intent(itemlist.this, additems.class);
                 startActivity(intentLoadActivity);
-                int alteredDaily = (1);
-                int alteredTotal = (( 1));
-                editor.putString("daily", "" + alteredDaily);
-                editor.putString("total", ""+ alteredTotal);
-                editor.apply();
-                editor.commit();
+//                int alteredDaily = (1);
+//                int alteredTotal = (( 1));
+//                editor.putString("daily", "" + alteredDaily);
+//                editor.putString("total", ""+ alteredTotal);
+//                editor.apply();
+//                editor.commit();
             }
         });
 
