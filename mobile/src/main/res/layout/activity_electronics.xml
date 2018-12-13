@@ -4,13 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".electronics">
+
+    <ImageView
+        android:id="@+id/fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fade"
+        android:elevation="10dp"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.875" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@android:color/white"
+        android:background="@android:color/transparent"
         android:gravity="top"
         android:orientation="vertical">
 
@@ -19,7 +34,7 @@
             android:id="@+id/relativeLayout1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white">
+            android:background="@android:color/transparent">
 
             <TextView
                 android:id="@+id/textView2"
@@ -27,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/montserratbold"
+                android:paddingBottom="140dp"
                 android:gravity="center"
                 android:paddingTop="15dp"
                 android:text="Electronics"
@@ -38,183 +54,223 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:paddingTop="15dp"
                 android:scaleType="fitCenter"
                 android:text="prev"
-                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48dp" />
+                app:srcCompat="@drawable/baseline_keyboard_backspace_white_48dp" />
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView3"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratbold"
-            android:letterSpacing="0.15"
-            android:paddingLeft="25dp"
-            android:paddingTop="15dp"
-            android:text="GUIDE"
-            android:textColor="#9d9d9d"
-            android:textSize="13sp" />
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratbold"
-            android:paddingLeft="25dp"
-            android:paddingTop="15dp"
-            android:text="Overview"
-            android:textColor="#5d5d5d"
-            android:textSize="18sp" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="390dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratmedium"
-            android:paddingLeft="25dp"
-            android:paddingTop="10dp"
-            android:text="Electronics can be recycled by bringing them to a recycler. If the item is still in working condition it can also be donated at electronic stores or recreation centers. Taking it to a firm would also be an option. "
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratbold"
+                    android:letterSpacing="0.15"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:text="GUIDE"
+                    android:textColor="#9d9d9d"
+                    android:textSize="13sp" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratmedium"
-            android:paddingLeft="40dp"
-            android:paddingTop="15dp"
-            android:text="Recycle:"
-            android:textColor="#5d5d5d"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratbold"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="45dp"
+                    android:text="Overview"
+                    android:textColor="#5d5d5d"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:paddingTop="5dp"
-            android:text="- Computers"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Office equipment"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratmedium"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="80dp"
+                    android:paddingBottom="10dp"
+                    android:text="Electronics can be recycled by bringing them to a recycler. If the item is still in working condition it can also be donated at electronic stores or recreation centers. Taking it to a firm would also be an option. "
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- TV"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Cell phones"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratmedium"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="220dp"
+                    android:text="Recycle:"
+                    android:textColor="#5d5d5d"
+                    android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Keyboards"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratmedium"
-            android:paddingLeft="40dp"
-            android:paddingTop="10dp"
-            android:text="Do not recycle:"
-            android:textColor="#5d5d5d"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="245dp"
+                    android:text="- Computers"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:paddingTop="5dp"
-            android:text="- Microwaves"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Toasters"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Large household appliances"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Fans"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/montserratregular"
-            android:paddingLeft="40dp"
-            android:text="- Lamps"
-            android:textColor="#6a6a6a"
-            android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="265dp"
+                    android:text="- Office equipment"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="285dp"
+                    android:text="- TV"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="305dp"
+                    android:text="- Cell phones"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="325dp"
+                    android:text="- Keyboards"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratmedium"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="355dp"
+                    android:text="Do not recycle:"
+                    android:textColor="#5d5d5d"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="375dp"
+                    android:text="- Microwaves"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="395dp"
+                    android:text="- Toasters"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="415dp"
+                    android:text="- Large household appliances"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="435dp"
+                    android:text="- Fans"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="455dp"
+                    android:text="- Lamps"
+                    android:textColor="#6a6a6a"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="475dp"
+                    android:text=""
+                    android:textColor="#6a6a6a"
+                    android:textSize="40sp" />
+
+            </RelativeLayout>
+        </ScrollView>
 
     </LinearLayout>
 
