@@ -49,13 +49,13 @@ public class itemlist extends AppCompatActivity {
 
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
-        int dnum = mprefs.getInt("dailynum", 0);
-        int tnum = mprefs.getInt("totalnum", 0);
-        String dailytxt = "" + dnum;
-        String totaltxt = "" + tnum;
+        //int dnum = mprefs.getInt("dailynum", 0);
+        //int tnum = mprefs.getInt("totalnum", 0);
+        //String dailytxt = "" + dnum;
+        //String totaltxt = "" + tnum;
 //        String totalstr = ""+  mprefs.getInt("total", 0);
-        daily.setText(dailytxt);
-        total.setText(totaltxt);
+        daily.setText("0");
+        total.setText("0");
 
         editor.apply();
         editor.commit();
