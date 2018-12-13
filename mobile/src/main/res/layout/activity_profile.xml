@@ -10,7 +10,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@android:color/white"
+        android:background="@drawable/home2"
         android:gravity="top"
         android:orientation="vertical">
 
@@ -19,14 +19,14 @@
             android:id="@+id/relativeLayout1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white">
+            android:background="@android:color/transparent">
 
             <ImageButton
                 android:id="@+id/back_button"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:paddingTop="15dp"
                 android:scaleType="fitCenter"
                 android:text="prev"
