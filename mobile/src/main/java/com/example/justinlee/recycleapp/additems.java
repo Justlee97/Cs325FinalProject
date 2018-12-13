@@ -145,15 +145,6 @@ public class additems extends AppCompatActivity {
 
 
                 editor.putString("itemadded",amount.toString());
-
-
-
-//                int alteredDaily = (dailynum + finalamount);
-//                int alteredTotal = ((totalnum + finalamount));
-//                editor.putString("daily", "" + alteredDaily);
-//                editor.putString("total", ""+ alteredTotal);
-//                daily.setText("" + alteredDaily);
-//                total.setText("" + alteredTotal);
                 editor.apply();
                 editor.commit();
                 finish();
