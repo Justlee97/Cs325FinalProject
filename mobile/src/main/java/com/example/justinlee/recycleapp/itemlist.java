@@ -61,6 +61,9 @@ public class itemlist extends AppCompatActivity {
             daily.setText(dailytxt);}
         else{
             daily.setText("0");
+            editor.putInt("dailynum", 0);
+            editor.apply();
+            editor.commit();
         }
 
         boolean totalexists = mprefs.contains("totalnum");
@@ -68,7 +71,12 @@ public class itemlist extends AppCompatActivity {
             int tnum = mprefs.getInt("totalnum", 0);
             String totaltxt = "" + tnum;
             total.setText(totaltxt);}
-        else total.setText("0");
+        else {
+            editor.putInt("totalnum", 0);
+            editor.apply();
+            editor.commit();
+            total.setText("0");
+        }
 //        int dnum = mprefs.getInt("dailynum", 0);
 //        int tnum = mprefs.getInt("totalnum", 0);
 //

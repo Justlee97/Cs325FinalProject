@@ -51,20 +51,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentLoadActivity);
 
                 //Copy and paste this code for where the actual addition of recycling bin stuff needs to go. It should do all of the progress bar stuff and saving of the data for you.
-                if(currentprogress >= 8){
-                    progressBar.setProgress(0);
-                    editor.putInt("level", currentLevel+1);
-                    editor.putInt("Pbar", 0);
-                    editor.apply();
-                    editor.commit();
-                }
-                else {
-                    progressBar.setProgress(currentprogress + 1);
-                    editor.putInt("Pbar", currentprogress + 1);
-                    editor.apply();
-                    editor.commit();
-                }
-            }
+//                if(currentprogress >= 8){
+//                progressBar.setProgress(0);
+//                editor.putInt("level", currentLevel+1);
+//                editor.putInt("Pbar", 0);
+//                editor.apply();
+//                editor.commit();
+//            }
+//                else {
+//                progressBar.setProgress(currentprogress + 1);
+//                editor.putInt("Pbar", currentprogress + 1);
+//                editor.apply();
+//                editor.commit();
+//            }
+        }
         });
 
         hamburgerButton = (ImageButton) findViewById(R.id.hamburger_button);
