@@ -36,7 +36,8 @@ public class itemlist extends AppCompatActivity {
         //We can try to save hashmap to internal memory
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         map.put("Paper", 3);
-        map.put("Plastic bottles", mprefs.getInt("ListValue", 1) );
+        int val =  mprefs.getInt("ListValue", 1);
+        map.put("Plastic bottles", val);
         map.put("Glass bottle", 4);
         map.put("Electronic phone",1);
 
