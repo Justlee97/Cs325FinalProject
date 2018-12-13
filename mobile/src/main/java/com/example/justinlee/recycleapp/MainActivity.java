@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.content.Intent;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton hamburgerButton;
     ImageButton circleButton;
     ProgressBar progressBar;
+    TextView amount;
 
 
     @Override
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         profileButton = (ImageButton) findViewById(R.id.profile_button) ;
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        amount = (TextView)findViewById(R.id.textView3);
         //Saving progress bar values
         SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = mprefs.edit();
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
         int currentLevel = mprefs.getInt("level", 1);
 
         int currentprogress = mprefs.getInt("Pbar",0);
+        String currprogress = ""+currentprogress;
         progressBar.setProgress(currentprogress);
+        amount.setText(currprogress);
 
         //Finished loading previous progressbar
         profileButton.setOnClickListener(new View.OnClickListener() {

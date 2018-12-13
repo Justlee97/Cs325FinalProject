@@ -46,9 +46,7 @@ public class itemlist extends AppCompatActivity {
 
 
 
-        editor.putInt("totalnum",6);
-        editor.apply();
-        editor.commit();
+
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
         int dnum = mprefs.getInt("dailynum", 0);
@@ -58,12 +56,7 @@ public class itemlist extends AppCompatActivity {
 //        String totalstr = ""+  mprefs.getInt("total", 0);
         daily.setText(dailytxt);
         total.setText(totaltxt);
-//        String dailystr = daily.toString();
-//        String totalstr = total.toString();
-//        int dailynum = Integer.parseInt(dailystr);
-//        int totalnum = Integer.parseInt(totalstr);
-//        editor.putString("dailynum", ""+1);
-//        editor.putString("totalnum", ""+1);
+
         editor.apply();
         editor.commit();
 
