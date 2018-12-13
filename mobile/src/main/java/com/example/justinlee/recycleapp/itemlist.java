@@ -29,11 +29,12 @@ public class itemlist extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemlist);
-
+        SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mprefs.edit();
         //Hashmap to ArrayList to ListView
         //We can try to save hashmap to internal memory
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        map.put("item", 1);
+        map.put("Plastic bottles", mprefs.getInt("ListValue", 1) );
         List<String> currlist = new ArrayList<String>();
         for(Map.Entry<String, Integer >e: map.entrySet()){
             currlist.add(e.getKey() + "                                                                   " + e.getValue());
@@ -46,20 +47,18 @@ public class itemlist extends AppCompatActivity {
 
 
 
-
-        SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = mprefs.edit();
-        mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
-        daily.setText(mprefs.getString("dailystr", "0"));
-        total.setText(mprefs.getString("totalstr", "0"));
-        String dailystr = daily.toString();
-        String totalstr = total.toString();
+        //int bruh = mprefs.getInt("daily", 0);
+//        String totalstr = ""+  mprefs.getInt("total", 0);
+        daily.setText("5");
+        total.setText("6");
+//        String dailystr = daily.toString();
+//        String totalstr = total.toString();
 //        int dailynum = Integer.parseInt(dailystr);
 //        int totalnum = Integer.parseInt(totalstr);
-        editor.putString("dailynum", ""+1);
-        editor.putString("totalnum", ""+1);
+//        editor.putString("dailynum", ""+1);
+//        editor.putString("totalnum", ""+1);
         editor.apply();
         editor.commit();
 
@@ -125,8 +124,6 @@ public class itemlist extends AppCompatActivity {
                 int alteredTotal = (( 1));
                 editor.putString("daily", "" + alteredDaily);
                 editor.putString("total", ""+ alteredTotal);
-                daily.setText("" + alteredDaily);
-                total.setText("" + alteredTotal);
                 editor.apply();
                 editor.commit();
             }

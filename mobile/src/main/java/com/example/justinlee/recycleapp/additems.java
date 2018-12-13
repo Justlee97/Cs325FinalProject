@@ -81,6 +81,7 @@ public class additems extends AppCompatActivity {
         spinner = (Spinner)findViewById(R.id.spinner);
         String[] categoriesSpinner = new String[] {"Plastic", "Glass","Paper"};
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, android.R.layout.simple_spinner_item,categoriesSpinner);
+        spinner.setAdapter(adapter);
 
 //        ProgressBar progressbar = (ProgressBar) findViewById(R.id.progressBar);
 //        EditText numadded = (EditText)findViewById(R.id.edittext);
@@ -106,8 +107,13 @@ public class additems extends AppCompatActivity {
                 SharedPreferences mprefs = getSharedPreferences("prefID", Context.MODE_PRIVATE);
                 String amountadded = amount.getText().toString();
                 int finalamount = Integer.parseInt(amountadded);
-                editor.putInt("Pbar", mprefs.getInt("Pbar" , 0) + finalamount);
+                if ((finalamount + mprefs.getInt("Pbar" , 0))%8 == 0) editor.putInt("level", mprefs.getInt("level", 0) + 1);
+                editor.putInt("Pbar", (mprefs.getInt("Pbar" , 0) + finalamount)%8);
+                editor.putInt("ListValue",mprefs.getInt("ListValue", 0) + finalamount);
+                //
                 editor.putString("itemadded",amount.toString());
+                editor.putInt("daily",mprefs.getInt("daily", 0)+finalamount);
+                editor.putInt("total",mprefs.getInt("total", 0)+finalamount);
 
 //                int alteredDaily = (dailynum + finalamount);
 //                int alteredTotal = ((totalnum + finalamount));
