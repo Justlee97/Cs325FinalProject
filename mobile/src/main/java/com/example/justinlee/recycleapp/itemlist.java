@@ -46,13 +46,18 @@ public class itemlist extends AppCompatActivity {
 
 
 
-
+        editor.putInt("totalnum",6);
+        editor.apply();
+        editor.commit();
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
-        //int bruh = mprefs.getInt("daily", 0);
+        int dnum = mprefs.getInt("dailynum", 0);
+        int tnum = mprefs.getInt("totalnum", 0);
+        String dailytxt = "" + dnum;
+        String totaltxt = "" + tnum;
 //        String totalstr = ""+  mprefs.getInt("total", 0);
-        daily.setText("5");
-        total.setText("6");
+        daily.setText(dailytxt);
+        total.setText(totaltxt);
 //        String dailystr = daily.toString();
 //        String totalstr = total.toString();
 //        int dailynum = Integer.parseInt(dailystr);

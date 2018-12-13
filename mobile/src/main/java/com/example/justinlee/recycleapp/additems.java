@@ -110,10 +110,13 @@ public class additems extends AppCompatActivity {
                 if ((finalamount + mprefs.getInt("Pbar" , 0))%8 == 0) editor.putInt("level", mprefs.getInt("level", 0) + 1);
                 editor.putInt("Pbar", (mprefs.getInt("Pbar" , 0) + finalamount)%8);
                 editor.putInt("ListValue",mprefs.getInt("ListValue", 0) + finalamount);
-                //
-                editor.putString("itemadded",amount.toString());
-                editor.putInt("daily",mprefs.getInt("daily", 0)+finalamount);
-                editor.putInt("total",mprefs.getInt("total", 0)+finalamount);
+                int dailynumval = mprefs.getInt("dailynum", 0);
+                dailynumval += finalamount;
+                int totalnumval = mprefs.getInt("totalnum", 0);
+                totalnumval += finalamount;
+                //editor.putString("itemadded",amount.toString());
+                editor.putInt("dailynum",dailynumval);
+                editor.putInt("totalnum",totalnumval);
 
 //                int alteredDaily = (dailynum + finalamount);
 //                int alteredTotal = ((totalnum + finalamount));
