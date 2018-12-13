@@ -111,8 +111,9 @@
                 android:ems="10"
                 android:fontFamily="@font/montserratsemibold"
                 android:inputType="numberDecimal"
-                android:text="               1"
-                android:textColor="#9d9d9d" />
+                android:text="1"
+                android:textColor="#9d9d9d"
+                android:gravity="right"/>
 
 
             <EditText
