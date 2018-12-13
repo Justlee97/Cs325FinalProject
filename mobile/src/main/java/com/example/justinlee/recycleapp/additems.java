@@ -79,9 +79,22 @@ public class additems extends AppCompatActivity {
 
 
         spinner = (Spinner)findViewById(R.id.spinner);
-        String[] categoriesSpinner = new String[] {"Plastic", "Glass","Paper"};
-        ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, android.R.layout.simple_spinner_item,categoriesSpinner);
+        String[] categoriesSpinner = new String[] {"Category", "Plastic", "Glass","Paper"};
+        ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, R.layout.spinner_item,categoriesSpinner){
+            @Override
+            public boolean isEnabled(int position) {
+                if (position == 0) {
+                    // Disable the first item from Spinner
+                    // First item will be use for hint
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        };
         spinner.setAdapter(adapter);
+
+
 
 //        ProgressBar progressbar = (ProgressBar) findViewById(R.id.progressBar);
 //        EditText numadded = (EditText)findViewById(R.id.edittext);

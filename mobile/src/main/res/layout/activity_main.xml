@@ -95,7 +95,7 @@
                 android:text="@string/feedback"
                 android:textColor="#5d5d5d"
                 android:textSize="20sp"
-                android:fontFamily="@font/montserratmedium" />
+                android:fontFamily="@font/montserratregular" />
 
             <TextView
                 android:id="@+id/textView3"
