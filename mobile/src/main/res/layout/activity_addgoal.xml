@@ -13,7 +13,7 @@
         android:gravity="top"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="47dp">
 
 
         <RelativeLayout
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/montserratbold"
-                android:paddingBottom="20dp"
                 android:gravity="center"
                 android:paddingTop="15dp"
+                android:paddingBottom="20dp"
                 android:text="@string/add_goal"
                 android:textColor="#5d5d5d"
                 android:textSize="20sp" />
@@ -54,8 +54,8 @@
             android:id="@+id/rl2"
             android:layout_width="390dp"
             android:layout_height="600dp"
-            android:paddingLeft="20dp"
-            android:background="@android:color/transparent">
+            android:background="@android:color/transparent"
+            android:paddingLeft="20dp">
 
             <TextView
                 android:id="@+id/textView3"
@@ -63,7 +63,6 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/montserratmedium"
-                android:paddingTop="20dp"
                 android:text=" Item category"
                 android:textColor="#5d5d5d"
                 android:textSize="15sp" />
@@ -75,7 +74,6 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/montserratmedium"
                 android:paddingLeft="265dp"
-                android:paddingTop="20dp"
                 android:text=" Amount"
                 android:textColor="#5d5d5d"
                 android:textSize="15sp" />
@@ -97,7 +95,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/montserratmedium"
                 android:paddingTop="100dp"
-                android:text=" Name"
+                android:text=" Goal Name"
                 android:textColor="#5d5d5d"
                 android:textSize="15sp" />
 
@@ -118,7 +116,7 @@
 
 
             <EditText
-                android:id="@+id/itemname"
+                android:id="@+id/goalname2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -127,12 +125,11 @@
                 android:layout_marginEnd="0dp"
                 android:ems="10"
                 android:fontFamily="@font/montserratsemibold"
-                android:text="Name"
+                android:hint="Enter Your Goal"
                 android:textColor="#9d9d9d" />
-            .
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/addbutton"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"

@@ -12,7 +12,9 @@
         android:layout_height="fill_parent"
         android:background="@drawable/home2"
         android:gravity="top"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <RelativeLayout
@@ -71,17 +73,22 @@
 
         </RelativeLayout>
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:fontFamily="@font/montserratbold"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="Amy Liu"
-                android:textColor="#5d5d5d"
-                android:textSize="20sp" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/montserratbold"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="Amy Liu"
+            android:textColor="#5d5d5d"
+            android:textSize="20sp" />
+
+        <ListView
+            android:id="@+id/goallist"
+            android:layout_width="match_parent"
+            android:layout_height="235dp" />
     </LinearLayout>
 
     <carbon.widget.FloatingActionButton
@@ -106,4 +113,23 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout3"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:layout_constraintVertical_bias="0.143" />
+
+    <EditText
+        android:id="@+id/goalname"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:fontFamily="@font/montserratsemibold"
+        android:gravity="center"
+        android:hint="Enter A New Goal"
+        android:textColor="#9d9d9d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
