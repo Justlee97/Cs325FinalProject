@@ -36,8 +36,10 @@ public class itemlist extends AppCompatActivity {
         //We can try to save hashmap to internal memory
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         map.put("Paper", 3);
+        //This is for test list
         int val = 0;
-        if (mprefs.contains("ListValue")){val =  mprefs.getInt("ListValue", 1);}
+        boolean listvalexiss = mprefs.contains("ListValue");
+        if (listvalexiss){val =  mprefs.getInt("ListValue", 1);}
         else{
             val = 1;
             editor.putInt("ListValue", 1);
