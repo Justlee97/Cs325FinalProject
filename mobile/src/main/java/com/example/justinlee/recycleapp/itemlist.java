@@ -48,7 +48,7 @@ public class itemlist extends AppCompatActivity {
         }
 
         map.put("Plastic bottles", val);
-        map.put("Glass bottle", 4);
+        map.put("Glass bottle", 2);
         map.put("Electronic phone",1);
 
         List<String> currlist = new ArrayList<String>();
@@ -85,7 +85,8 @@ public class itemlist extends AppCompatActivity {
             editor.putInt("totalnum", 0);
             editor.apply();
             editor.commit();
-            total.setText("0");
+            String x = "" + (5 + val);
+            total.setText(x);
         }
 //        int dnum = mprefs.getInt("dailynum", 0);
 //        int tnum = mprefs.getInt("totalnum", 0);
