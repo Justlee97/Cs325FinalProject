@@ -17,7 +17,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="@drawable/home"
         android:gravity="top" >
 
 
@@ -91,11 +91,11 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:gravity="center"
-                android:paddingTop="500dp"
+                android:paddingTop="565dp"
                 android:text="@string/feedback"
-                android:textColor="#a9a9a9"
+                android:textColor="#5d5d5d"
                 android:textSize="20sp"
-                android:fontFamily="@font/montserratregular" />
+                android:fontFamily="@font/montserratmedium" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -105,7 +105,7 @@
                 android:paddingTop="245dp"
                 android:paddingLeft="150dp"
                 android:text="@string/amount"
-                android:textColor="#6ae0d6"
+                android:textColor="#00c3c3"
                 android:textSize="60sp"
                 android:fontFamily="@font/montserratsemibold" />
 
@@ -117,7 +117,7 @@
                 android:paddingTop="245dp"
                 android:paddingLeft="190dp"
                 android:text="@string/separator"
-                android:textColor="#e0e0e0"
+                android:textColor="#008d87"
                 android:textSize="60sp"
                 android:fontFamily="@font/montserratsemibold" />
 
@@ -129,7 +129,7 @@
                 android:paddingTop="245dp"
                 android:paddingLeft="217dp"
                 android:text="@string/target_amount"
-                android:textColor="#e0e0e0"
+                android:textColor="#008d87"
                 android:textSize="60sp"
                 android:fontFamily="@font/montserratsemibold" />
 
@@ -141,7 +141,7 @@
                 android:gravity="center_horizontal"
                 android:paddingTop="325dp"
                 android:text="@string/items_recycled"
-                android:textColor="#a9a9a9"
+                android:textColor="#5d5d5d"
                 android:textSize="15sp"
                 android:fontFamily="@font/montserratregular" />
 
