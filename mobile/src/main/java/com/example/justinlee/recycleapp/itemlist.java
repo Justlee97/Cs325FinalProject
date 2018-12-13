@@ -2,6 +2,7 @@ package com.example.justinlee.recycleapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Adapter;
@@ -34,27 +35,40 @@ public class itemlist extends AppCompatActivity {
         //Hashmap to ArrayList to ListView
         //We can try to save hashmap to internal memory
         HashMap<String, Integer> map = new HashMap<String, Integer>();
+        map.put("Paper", 3);
         map.put("Plastic bottles", mprefs.getInt("ListValue", 1) );
+        map.put("Glass bottle", 4);
+        map.put("Electronic phone",1);
+
         List<String> currlist = new ArrayList<String>();
         for(Map.Entry<String, Integer >e: map.entrySet()){
-            currlist.add(e.getKey() + "                                                  " + e.getValue());
+            currlist.add(e.getKey() + "\t\t\t\t\t\t\t\t\t\t\t" + e.getValue());
         }
         bin = (ListView)findViewById(R.id.bin);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(itemlist.this, android.R.layout.simple_list_item_1,currlist);
         bin.setAdapter(arrayAdapter);
 
 
-
-
-
         TextView daily = ((TextView)findViewById(R.id.textView7));
         TextView total = ((TextView)findViewById(R.id.textView8));
-        //int dnum = mprefs.getInt("dailynum", 0);
-        //int tnum = mprefs.getInt("totalnum", 0);
-        //String dailytxt = "" + dnum;
-        //String totaltxt = "" + tnum;
+        boolean dailyexists = mprefs.contains("dailynum");
+        if (dailyexists){
+            int dnum = mprefs.getInt("dailynum", 0);
+            String dailytxt = "" + dnum;
+            daily.setText(dailytxt);}
+        else daily.setText("0");
+        boolean totalexists = mprefs.contains("totalnum");
+        if (totalexists){
+            int tnum = mprefs.getInt("totalnum", 0);
+            String totaltxt = "" + tnum;
+            daily.setText(totaltxt);}
+        else daily.setText("0");
+//        int dnum = mprefs.getInt("dailynum", 0);
+//        int tnum = mprefs.getInt("totalnum", 0);
+//
+//        String totaltxt = "" + tnum;
 //        String totalstr = ""+  mprefs.getInt("total", 0);
-        daily.setText("0");
+//        daily.setText("0");
         total.setText("0");
 
         editor.apply();
