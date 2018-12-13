@@ -79,7 +79,7 @@ public class additems extends AppCompatActivity {
 
 
         spinner = (Spinner)findViewById(R.id.spinner);
-        String[] categoriesSpinner = new String[] {"Category", "Plastic", "Glass","Paper"};
+        String[] categoriesSpinner = new String[] {"Category", "Plastic", "Glass","Paper", "Electronic"};
         ArrayAdapter<String>adapter = new ArrayAdapter<String>(additems.this, R.layout.spinner_item,categoriesSpinner){
             @Override
             public boolean isEnabled(int position) {
@@ -123,13 +123,30 @@ public class additems extends AppCompatActivity {
                 if ((finalamount + mprefs.getInt("Pbar" , 0))%8 == 0) editor.putInt("level", mprefs.getInt("level", 0) + 1);
                 editor.putInt("Pbar", (mprefs.getInt("Pbar" , 0) + finalamount)%8);
                 editor.putInt("ListValue",mprefs.getInt("ListValue", 0) + finalamount);
-                //int dailynumval = mprefs.getInt("dailynum", 0);
-                //dailynumval += finalamount;
-                //int totalnumval = mprefs.getInt("totalnum", 0);
-                //totalnumval += finalamount;
-                //editor.putString("itemadded",amount.toString());
-                //editor.putInt("dailynum",dailynumval);
-                //editor.putInt("totalnum",totalnumval);
+
+
+
+                boolean dailyexists = mprefs.contains("dailynum");
+                if(dailyexists){
+                    int dailynumval = mprefs.getInt("dailynum", 0);
+                    dailynumval += finalamount;
+                    editor.putInt("dailynum",dailynumval);
+                }
+                else editor.putInt("dailynum", finalamount);
+
+
+                boolean totalexists = mprefs.contains("totalnum");
+                if(totalexists){
+                    int totalnumval = mprefs.getInt("totalnum", 0);
+                    totalnumval += finalamount;
+                    editor.putInt("totalnum",totalnumval);
+                }
+                else editor.putInt("totalnum", finalamount);
+
+
+                editor.putString("itemadded",amount.toString());
+
+
 
 //                int alteredDaily = (dailynum + finalamount);
 //                int alteredTotal = ((totalnum + finalamount));
