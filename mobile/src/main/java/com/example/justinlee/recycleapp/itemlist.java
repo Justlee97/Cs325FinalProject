@@ -48,7 +48,7 @@ public class itemlist extends AppCompatActivity {
         }
 
         map.put("Plastic bottles", val);
-        map.put("Glass bottle", 2);
+        map.put("Glass bottle", 1);
         map.put("Electronic phone",1);
 
         List<String> currlist = new ArrayList<String>();
